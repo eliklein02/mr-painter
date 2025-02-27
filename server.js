@@ -8,6 +8,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.listen(3750, () => {
-  console.log("Server is running on http://localhost:3750");
+const port = process.env.PORT || 3750;
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
 });
